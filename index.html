@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+    
+    <link rel="icon" type=“image/png” href="/assets/fav-b45a1784.png" />
+  <link rel="stylesheet" href="assets/index-1d5ce396.css">
+</head>
+<body class="w-screen bg-gray-100">
+    <div class="container mt-20 flex mx-auto items-center justify-center">
+        <div class="phone bg-black border-8 border-gray-800 rounded-2xl w-72 h-128 mr-10 relative overflow-hidden">
+            <div class="screen bg-black rounded-2xl w-full h-full  relative overflow-hidden">
+              <img src="assets/1.png" alt="Image 1" class="image absolute w-full h-auto animate-change-image">
+            </div>
+          </div>
+        <div class="flex flex-col ">
+        <div class="right-0 flex flex-col p-8 w-{85} border border-gray-400 rounded-md">
+            <h1 class="text-4xl flex justify-center m-8 font-extralight">Instagram</h1>
+             <form action=""><input id="textIput1" class="px-4 h-12 bg-gray-100 my-2 w-72 bord border border-1outline-blue-600 border-gray-200  text-xs flex justify-center" type="text" placeholder="Phone number,username or email address">
+             <input id="textInput2" class="px-4 h-12 bg-gray-100 my-2 w-72 border border-1outline-blue-600 border-gray-200 text-xs flex justify-center" type="text" placeholder="Password">
+             <button class="bg-blue-400 text-white w-72 rounded-md h-10" onclick="saveText()" >Login</button> </form>
+             <p class="flex justify-center mt-3 mb-3 ">OR</p>
+             <a href="facebook.com" class="flex justify-center cursor-pointer text-blue-800">Log in with facebook</a>
+             <a href="" class="flex justify-center text-xs text-blue-600 mt-3">Forgotten your password</a>
+        </div>
+        <div class="right-0 flex flex-col p-6 border border-gray-400 mt-4 w-{85} rounded-md">
+            <p class="flex justify-center">Don't have an account?<span class="text-blue-600 cursor-pointer">Sign up</span></p>
+        </div>
+        <div class="flex justify-center mt-2 mb-2"><p>Get the app</p></div>
+        <div class="cursor-pointer  flex space-x-5 justify-center">
+        <a href="https://itunes.apple.com/app/instagram"><img class=" w-28 h-auto" src="assets/appstore.png" alt="app store"></a>
+        <a href="https://play.google.com/store/apps/instagram"><img class="w-28 h-auto" src="assets/play store-923d80c7.png" alt="playstore"></a>
+    </div>
+    </div>
+    
+    </div>
+   <script>   const images = ["assets/1.png","assets/2.png","assets/3.png","assets/4.png"]; 
+    const imageElement = document.querySelector(".image");
+let currentIndex = 0;
+function changeImage() {
+  currentIndex = (currentIndex + 1) % images.length;
+  const imageUrl = images[currentIndex];
+  imageElement.src = imageUrl;
+}
+    setInterval(changeImage, 5000); // Change image every 5 seconds (5000 milliseconds)
+
+   
+  </script>
+</body>
+</html>
